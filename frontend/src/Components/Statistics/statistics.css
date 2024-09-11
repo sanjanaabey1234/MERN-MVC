@@ -1,0 +1,270 @@
+/* General styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.statistics-header {
+  text-align: center;
+  padding: 2rem;
+  background: radial-gradient(circle, #8e44ad, #3498db);
+  color: white;
+  animation: headerSlideIn 1.5s ease-out;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.statistics-header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: neonTextGlow 3s infinite alternate;
+}
+
+/* Enhanced Button Styling */
+.download-button {
+  background: linear-gradient(45deg, #fc466b, #3f5efb);
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 1rem;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.download-button:hover {
+  background: linear-gradient(45deg, #3f5efb, #fc466b);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.download-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400%;
+  height: 400%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.6s ease;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.download-button:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Content Section */
+.statistics-content {
+  padding: 3rem;
+  animation: fadeInUp 1.2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Table Styling */
+.statistics-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 3rem 0;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.statistics-table thead {
+  background-color: #2980b9;
+  color: white;
+  animation: fadeInDown 0.8s ease;
+}
+
+.statistics-table th,
+.statistics-table td {
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  animation: tableStaggerFadeIn 1.5s ease-out;
+}
+
+.statistics-table tbody tr {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.statistics-table tbody tr:hover {
+  background-color: rgba(52, 152, 219, 0.2);
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .statistics-header h1 {
+    font-size: 3rem;
+  }
+
+  .download-button {
+    font-size: 1.1rem;
+    padding: 0.7rem 1.8rem;
+  }
+
+  .statistics-content {
+    padding: 2.5rem;
+  }
+
+  .statistics-table th,
+  .statistics-table td {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .statistics-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .download-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.6rem;
+  }
+
+  .statistics-content {
+    padding: 2rem;
+  }
+
+  .statistics-table th,
+  .statistics-table td {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .statistics-header {
+    padding: 1.5rem;
+  }
+
+  .statistics-header h1 {
+    font-size: 2rem;
+  }
+
+  .download-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.4rem;
+  }
+
+  .statistics-content {
+    padding: 1.5rem;
+  }
+
+  .statistics-table th,
+  .statistics-table td {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .statistics-header {
+    padding: 1rem;
+  }
+
+  .statistics-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .download-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 1.2rem;
+  }
+
+  .statistics-content {
+    padding: 1rem;
+  }
+
+  .statistics-table th,
+  .statistics-table td {
+    padding: 0.6rem;
+  }
+
+  .statistics-table {
+    font-size: 0.85rem;
+  }
+}
+
+/* Slide-in Animation for the Header */
+@keyframes headerSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered Fade-In for Table Rows */
+@keyframes tableStaggerFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating Effect */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Floating Effect Applied to Buttons */
+.download-button {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Fade In from Below for the Page Content */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

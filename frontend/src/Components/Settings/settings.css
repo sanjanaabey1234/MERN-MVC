@@ -1,0 +1,53 @@
+.settings-page {
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.settings-page.light {
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+.settings-page.dark {
+  background-color: #333;
+  color: #f0f4f8;
+}
+
+.settings-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.settings-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.settings-section {
+  margin-bottom: 2rem;
+}
+
+.settings-section h2 {
+  margin-bottom: 1rem;
+}
+
+.settings-section select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.settings-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.home-link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
